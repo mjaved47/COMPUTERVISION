@@ -7,14 +7,17 @@ dog = cv.imread('images\happydog.jpg')
 # getting size of an image
 height = dog.shape[0]
 width = dog.shape[1]
-print('height =' + str(height))
-print('width =' + str(width))
+# print('height =' + str(height))
+# print('width =' + str(width))
 # cv.imshow('Dog', dog)#--------------------------------------------showing the image in its original dimensions   
 
 # resizing an image
-small_size = (int(width/4), int(height/4))#-----------------------resizing the original image to the quarter of its original size.
-dog_small_linear = cv.resize(dog, small_size, cv.INTER_LINEAR)#---LINEAR Interpolation
+small_size = (int(width/4), int(height/4))#------------------------resizing the original image to the quarter of its original size.
+dog_small_linear = cv.resize(dog, small_size, cv.INTER_LINEAR)#----LINEAR Interpolation
 cv.imshow('Resize Linear Interpolation', dog_small_linear)
+
+dog_small_area = cv.resize(dog, small_size, cv.INTER_AREA)#--------AREA Interpolation
+cv.imshow('Resize Area Interpolation', dog_small_area)
 
 dog_small_cubic = cv.resize(dog, small_size, cv.INTER_CUBIC)#------CUBIC Interpolation
 cv.imshow('Resize Cubic Interpolation', dog_small_cubic)
