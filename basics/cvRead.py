@@ -26,6 +26,4 @@ cv.imshow('Resize Cubic Interpolation', dog_small_cubic)
 dogGrayscale = cv.cvtColor(dog, cv.COLOR_BGR2GRAY)
 # cv.imshow('Grayscale', dogGrayscale)
 
-
-
 cv.waitKey(0)
